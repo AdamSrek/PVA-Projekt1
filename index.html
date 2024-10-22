@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Fc Barcelona</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgba(107, 107, 107, 0.37);
+    }
+
+    .l-heading {
+        font-size: 4rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.1;
+    }
+
+    .lead {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        display: inline-block;
+        color: black;
+        background-color: #189bcc;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background-color: white;
+    }
+
+    #navbar {
+        background-color: #189bcc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        position: fixed;
+        width: 100%;
+    }
+
+    #navbar .logo{
+        margin: 0 12px;
+    }
+
+    #navbar ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    #navbar ul li a {
+        text-decoration: none;
+        margin: 0 12px;
+        padding: 12px;
+        border-radius: 5px;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    #navbar ul li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #showcase {
+        background: #333 url(https://images.unsplash.com/photo-1667983090238-4cb9adfe49a7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)no-repeat center/cover;
+        height: 100vh;
+        color: white;
+    }
+
+    #showcase .showcase-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        color: white;
+        padding: 0 2rem;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .list {
+        background-color: #f2f2f2; 
+        padding: 2rem;
+        border-radius: 8px; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        margin: 2rem; 
+        text-align: center;
+    }
+
+    .list h3 {
+        margin-bottom: 1rem; 
+        font-size: 2rem;
+    }
+
+    .list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .list li {
+        padding: 0.5rem 0;
+        transition: background-color 0.3s; 
+    }
+
+    .list li:hover {
+        background-color: #d0e7ff; 
+        border-radius: 5px; 
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 2rem;
+        position: relative;
+    }
+
+    .image-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        border: 3px solid #A50044;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .image-container:hover img {
+        transform: scale(1.2);
+    }
+
+    .image-container .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover .text {
+        opacity: 1;
+    }
+
+    body{
+        background-color: lightblu #189bcc;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+        border: 1px black solid;
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 5px;
+    }
+
+    .block{
+        margin: 20px 20px 25px;
+        border: 1px red;
+        padding: 10px 20px 15px;
+        background-color: #189bcc;
+    }
+
+    .m-t-1{
+        margin-top: 10px;
+    }
+
+    .p-1{
+        padding: 10px;
+    }
+
+    .p-2{
+        padding: 20px;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        border-radius: 5px;
+        background-color: black;
+    }
+</style>
+
+    
+    <script>
+        function scrollToSection() {
+            const targetSection = document.getElementById('list');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body id="home">
+    <header id="navbar">
+        <div class="logo"><i class="fa-solid fa-futbol"></i> Fc Barcelona</div>
+        <ul>
+            <li><a href="#home"><i class="fa-solid fa-house"></i> home</a></li>
+            <li><a href="./tabulka.html"><i class="fa-solid fa-table"></i> table</a></li>
+            <li><a href="https://www.fcbarcelona.com/en/"><i class="fa-regular fa-address-card"></i> contact</a></li>
+        </ul>
+    </header>
+
+    <div id="showcase">
+        <div class="showcase-content">
+            <h1 class="l-heading">Fc Barcelona</h1>
+            <p class="lead">Profesionální španělský fotbalový klub sídlící ve městě Barcelona, v autonomním společenství Katalánsko.</p>
+            <button class="btn" onclick="scrollToSection()">Chci vědět víc</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <main>
+        <div class="list" id="list">
+            <h3>Seznam hráčů</h3>
+            <ul>
+                <li>Lamine Yamal</li>
+                <li>Dani Olmo</li>
+                <li>Gavi</li>
+                <li>Robert Lewandowski</li>
+                <li>Raphina</li>
+                <li>Pedri</li>
+                <li>Frenkie de Jong</li>
+                <li>Ronald Araújo</li>
+                <li>Fermín López</li>
+                <li>Ferran Torres</li>
+                <li>Alejandro Balde</li>
+                <li>Pablo Torre</li>
+                <li>Jules Koundé</li>
+                <li>Marc-André ter Stegen</li>
+                <li>Inigo Martínez</li>
+                <li>Andreas Christensen</li>
+            </ul>
+        </div>
+        
+        <div class="images">
+            <div class="image-container">
+                <img src="https://zobaczone.pl/wp-content/uploads/2013/07/camp_nou_02.jpg" alt="Camp Nou Stadium">
+                <div class="text">Stadion</div>
+            </div>
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png" alt="FC Barcelona Logo">
+                <div class="text">Logo</div>
+            </div>
+        </div>
+    </main>
+    <br>
+    <h1 style="text-align: center;">Vyplň!</h1>
+    <div class="container">
+        <form>
+            <div class="block">
+                <label for="fname"> Křestní jméno:</label><br>
+                <input type="text" name="fname" id="fname"><br>
+                <label for="lname">Příjmení:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+            </div>
+            <hr>
+            <div class="block">
+                <input type="radio" id="barcelona" name="fav_team" value="FC Barcelona">
+                <label for="barcelona">FC Barcelona</label><br>
+                <input type="radio" id="madrid" name="fav_team" value="Real Madrid">
+                <label for="madrid">Real Madrid</label><br>
+            </div>
+            <hr>
+            <input type="submit" value="Odeslat">
+        </form>
+    </div>
+    <ul style="text-align: center;">
+        <li><a href="https://www.instagram.com/fcbarcelona/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+    </ul>
+    <br>
+    <hr>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 FC Barcelona Všechna práva vyhrazena</p>
+    </footer>
+</body>
+</html>
