@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Fc Barcelona</title>
+    <link rel="stylesheet" href="./style-css/style.css">
+ 
+    <script>
+        function scrollToSection() {
+            const targetSection = document.getElementById('list');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body id="home">
+    <header id="navbar">
+        <div class="logo"><i class="fa-solid fa-futbol"></i> Fc Barcelona</div>
+        <ul>
+            <li><a href="#home"><i class="fa-solid fa-house"></i> home</a></li>
+            <li><a href="./tabulka.html"><i class="fa-solid fa-table"></i> table</a></li>
+            <li><a href="https://www.fcbarcelona.com/en/"><i class="fa-regular fa-address-card"></i> contact</a></li>
+        </ul>
+    </header>
+
+    <div id="showcase">
+        <div class="showcase-content">
+            <h1 class="l-heading">Fc Barcelona</h1>
+            <p class="lead">Profesionální španělský fotbalový klub sídlící ve městě Barcelona, v autonomním společenství Katalánsko.</p>
+            <button class="btn" onclick="scrollToSection()">Chci vědět víc</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <main>
+        <div class="list" id="list">
+            <h3>Seznam hráčů</h3>
+            <ul>
+                <li>Lamine Yamal</li>
+                <li>Dani Olmo</li>
+                <li>Gavi</li>
+                <li>Robert Lewandowski</li>
+                <li>Raphina</li>
+                <li>Pedri</li>
+                <li>Frenkie de Jong</li>
+                <li>Ronald Araújo</li>
+                <li>Fermín López</li>
+                <li>Ferran Torres</li>
+                <li>Alejandro Balde</li>
+                <li>Pablo Torre</li>
+                <li>Jules Koundé</li>
+                <li>Marc-André ter Stegen</li>
+                <li>Inigo Martínez</li>
+                <li>Andreas Christensen</li>
+            </ul>
+        </div>
+        
+        <div class="images">
+            <div class="image-container">
+                <img src="https://zobaczone.pl/wp-content/uploads/2013/07/camp_nou_02.jpg" alt="Camp Nou Stadium">
+                <div class="text">Stadion</div>
+            </div>
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png" alt="FC Barcelona Logo">
+                <div class="text">Logo</div>
+            </div>
+        </div>
+    </main>
+    <br>
+    <h1 style="text-align: center;">Vyplň!</h1>
+    <div class="container">
+        <form>
+            <div class="block">
+                <label for="fname"> Křestní jméno:</label><br>
+                <input type="text" name="fname" id="fname"><br>
+                <label for="lname">Příjmení:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+            </div>
+            <hr>
+            <div class="block">
+                <input type="radio" id="barcelona" name="fav_team" value="FC Barcelona">
+                <label for="barcelona">FC Barcelona</label><br>
+                <input type="radio" id="madrid" name="fav_team" value="Real Madrid">
+                <label for="madrid">Real Madrid</label><br>
+            </div>
+            <hr>
+            <input type="submit" value="Odeslat">
+        </form>
+    </div>
+    <ul style="text-align: center;">
+        <li><a href="https://www.instagram.com/fcbarcelona/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+    </ul>
+    <br>
+    <hr>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 FC Barcelona Všechna práva vyhrazena</p>
+    </footer>
+</body>
+</html>
