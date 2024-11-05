@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabulka</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #showcase {
+            background: #333 url(https://zobaczone.pl/wp-content/uploads/2013/07/camp_nou_02.jpg) no-repeat center/cover;
+            height: 100vh;
+            color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #showcase .showcase-content {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        th {
+            background-color: #0044cc;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f1f1f1; 
+        }
+
+        @media (max-width: 600px) {
+            #showcase {
+                height: auto;
+                padding: 2rem;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            th, td {
+                padding: 0.7rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px;
+            padding: 10px 20px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: rgb(203, 201, 201);
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:history.back()" class="back-button">Zpět</a>
+    <div id="showcase">
+        <div class="showcase-content">
+            <table class="center">
+                <tr>
+                    <th>Příchody</th>
+                    <th>Odchody</th>
+                </tr>
+                <tr>
+                    <td>Dani Olmo - 09.08.2024</td>
+                    <td>Romeu Oriol - 05.08.2024</td>
+                </tr>
+                <tr>
+                    <td>Victor Pau - 24.07.2024</td>
+                    <td>Araujo Julian - 12.08.2024</td>
+                </tr>
+                <tr>
+                    <td>Szczęsny Wojciech - 02.10.2024</td>
+                    <td>Gündogan İlkay - 22.08.2024</td>
+                </tr>
+                <tr>
+                    <td>Ansu Fati - 30.06.2024</td>
+                    <td>Lenglet Clement - 24.08.2024</td>
+                </tr>
+                <tr>
+                    <td>Lopez Ruben - 30.08.2024</td>
+                    <td>Vitor Roque - 26.08.2024</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
